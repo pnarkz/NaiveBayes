@@ -79,16 +79,4 @@ Genellikle **Scikit-learn modeli** daha optimize ve hızlı çalışırken, öze
 
 Daha detaylı analiz ve görselleştirmeler için ilgili notebook dosyalarına göz atabilirsiniz.
 
-##  Kullanılan Kütüphaneler
-Bu proje aşağıdaki kütüphaneleri kullanmaktadır:
-
-```
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-time
-```
-
 
