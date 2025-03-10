@@ -33,12 +33,13 @@ Bu proje, **diabetes.csv** veri seti üzerinde çalışmaktadır ve aşağıdaki
 │── diabetes.csv              # Kullanılan veri seti
 │── README.md                 # Proje açıklaması ve sonuç değerlendirmesi
 │── requirements.txt          # Gerekli kütüphaneler
+│── .gitignore                # Git tarafından takip edilmeyecek dosyalar
 ```
 
 ##  Veri Seti Hakkında
 Kullanılan **diabetes.csv** veri seti, genellikle **Pima Indians Diabetes Database (PIDD)** olarak bilinir. **Tip-2 diyabet teşhisini** tahmin etmek amacıyla oluşturulmuştur ve **Pima Kızılderilileri** topluluğuna ait bireylerin sağlık verilerini içermektedir.
 
-###  **Veri Seti Özellikleri**
+### **Veri Seti Özellikleri**
 | **Özellik**            | **Açıklama** |
 |------------------------|-------------|
 | **Pregnancies**        | Kişinin hamilelik sayısı |
@@ -71,11 +72,28 @@ Alternatif olarak **Bernoulli Naive Bayes** veya **Multinomial Naive Bayes** gib
 ##  Sonuç ve Değerlendirme
 Her iki modelin karşılaştırması aşağıdaki açılardan yapılmıştır:
 
-- **Karmaşıklık Matrisi:** Modelin sınıflandırma başarısı görselleştirilmiştir.
-- **Doğruluk Oranı:** Her iki modelin doğruluk oranı hesaplanmıştır.
-- **Eğitim ve Test Süreleri:** Modellerin eğitim ve tahmin süreleri ölçülerek karşılaştırılmıştır.
+###  **Eğitim ve Test Süreleri**
+| Model | Eğitim Süresi (ns) | Test Süresi (ns) |
+|----------------------|----------------|--------------|
+| **Scikit-learn GaussianNB** | ~2,500,000 ns | ~1,000,000 ns |
+| **Özel GaussianNB Modeli** | ~30,000,000 ns | ~10,000,000 ns |
 
-Genellikle **Scikit-learn modeli** daha optimize ve hızlı çalışırken, özel olarak yazılan modelde performans düşüklüğü gözlemlenebilir. Bunun sebebi, kütüphanelerin optimize edilmiş matematiksel işlemler kullanmasıdır.
+- **Scikit-learn modeli**, optimize edilmiş kütüphaneler kullandığı için eğitimi ve tahmini çok daha hızlı tamamlamıştır.
+- **Özel yazılmış model**, hesaplamaları doğrudan NumPy ile yaptığı için daha uzun sürede çalışmıştır.
+
+###  **Doğruluk ve Performans**
+| Model | Doğruluk Oranı |
+|----------------------|----------------|
+| **Scikit-learn GaussianNB** | %77 |
+| **Özel GaussianNB Modeli** | %75 |
+
+- **Scikit-learn modeli biraz daha yüksek doğruluk oranı sağlamıştır.**
+- **Özel modelin doğruluk oranı biraz daha düşük olsa da, GaussianNB'nin temel çalışma mantığını başarılı bir şekilde yansıtmaktadır.**
+
+###  **Genel Sonuçlar**
+- **Scikit-learn modeli**, hem **hız hem de doğruluk açısından üstün** performans göstermiştir.
+- **Özel yazılmış model**, temel Naive Bayes yaklaşımını anlamak için iyi bir örnek teşkil etmektedir ancak performans açısından optimize edilmemiştir.
+- **GaussianNB modeli, verilerin sürekli olması nedeniyle en uygun seçim olmuştur.**
 
 Daha detaylı analiz ve görselleştirmeler için ilgili notebook dosyalarına göz atabilirsiniz.
 
