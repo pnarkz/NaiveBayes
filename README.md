@@ -2,7 +2,7 @@
 
 Bu proje, Naive Bayes yöntemini kullanarak ikili sınıflandırma gerçekleştirmektedir. Hem **Scikit-learn GaussianNB modeli** hem de **Python ile sıfırdan yazılmış bir Gaussian Naive Bayes modeli** kullanılarak sonuçlar karşılaştırılmıştır.
 
-## 📌 Proje İçeriği
+##  Proje İçeriği
 Bu proje, **diabetes.csv** veri seti üzerinde çalışmaktadır ve aşağıdaki aşamaları içermektedir:
 
 1. **Veri Ön İşleme:**
@@ -25,7 +25,7 @@ Bu proje, **diabetes.csv** veri seti üzerinde çalışmaktadır ve aşağıdaki
    - Her iki modelin doğruluk oranları, eğitim ve test süreleri karşılaştırılmıştır.
    - Sonuçlar görselleştirilerek analiz edilmiştir.
 
-## 📂 Proje Yapısı
+##  Proje Yapısı
 ```
 1.naiveBayes/
 │── gaussianNB_scikit.ipynb   # Scikit-learn modeli içeren notebook
@@ -35,10 +35,10 @@ Bu proje, **diabetes.csv** veri seti üzerinde çalışmaktadır ve aşağıdaki
 │── requirements.txt          # Gerekli kütüphaneler
 ```
 
-## 🔍 Veri Seti Hakkında
+##  Veri Seti Hakkında
 Kullanılan **diabetes.csv** veri seti, genellikle **Pima Indians Diabetes Database (PIDD)** olarak bilinir. **Tip-2 diyabet teşhisini** tahmin etmek amacıyla oluşturulmuştur ve **Pima Kızılderilileri** topluluğuna ait bireylerin sağlık verilerini içermektedir.
 
-### 📌 **Veri Seti Özellikleri**
+###  **Veri Seti Özellikleri**
 | **Özellik**            | **Açıklama** |
 |------------------------|-------------|
 | **Pregnancies**        | Kişinin hamilelik sayısı |
@@ -55,7 +55,7 @@ Kullanılan **diabetes.csv** veri seti, genellikle **Pima Indians Diabetes Datab
 - **Bağımsız değişkenler** sürekli değerler içerdiği için **Gaussian Naive Bayes modeli için uygundur.**
 - **Eksik veriler**, sürekli değişkenlerde ortalama ile doldurulmuştur.
 
-## ❓ Neden Gaussian Naive Bayes Seçildi?
+##  Neden Gaussian Naive Bayes Seçildi?
 **Gaussian Naive Bayes modeli**, sürekli veriler üzerinde etkili olan bir istatistiksel sınıflandırma yöntemidir. **Bu veri setinde tüm bağımsız değişkenler sayısal ve süreklidir (Glucose, BMI, Blood Pressure vb.), bu yüzden Gaussian modeli uygundur.**
 
 - **GaussianNB, verilerin normal dağılıma sahip olduğunu varsayar.**
@@ -68,7 +68,7 @@ Alternatif olarak **Bernoulli Naive Bayes** veya **Multinomial Naive Bayes** gib
 - **Multinomial Naive Bayes** genellikle **metin madenciliği ve kategorik veriler** için uygundur.
 - **Bu veri setindeki tüm özellikler sürekli olduğu için Gaussian Naive Bayes en iyi seçimdir.**
 
-## 🔍 Sonuç ve Değerlendirme
+##  Sonuç ve Değerlendirme
 Her iki modelin karşılaştırması aşağıdaki açılardan yapılmıştır:
 
 - **Karmaşıklık Matrisi:** Modelin sınıflandırma başarısı görselleştirilmiştir.
@@ -79,7 +79,7 @@ Genellikle **Scikit-learn modeli** daha optimize ve hızlı çalışırken, öze
 
 Daha detaylı analiz ve görselleştirmeler için ilgili notebook dosyalarına göz atabilirsiniz.
 
-## 🛠 Kullanılan Kütüphaneler
+##  Kullanılan Kütüphaneler
 Bu proje aşağıdaki kütüphaneleri kullanmaktadır:
 
 ```
@@ -91,27 +91,4 @@ scikit-learn
 time
 ```
 
-Gerekli kütüphaneleri yüklemek için:
-```bash
-pip install -r requirements.txt
-```
-
-## 📌 Çalıştırma Talimatları
-1. **Jupyter Notebook** ortamında çalıştırabilirsiniz:
-   ```bash
-   jupyter notebook
-   ```
-2. İlgili `.ipynb` dosyasını açarak hücreleri çalıştırabilirsiniz.
-
-## 📅 Ödev Bilgileri
-Bu proje, 2024-2025 Bahar Dönemi YZM212 Makine Öğrenmesi dersi 1. Laboratuvar Değerlendirmesi kapsamında hazırlanmıştır.
-
-📝 **Teslim Tarihi:** 10.03.2025 - 17:00
-
-👨‍🏫 **Değerlendirme:** 11.03.2025 - 13:30'da laboratuvar değerlendirme sınavı yapılacaktır.
-
----
-
-🎯 **Hazırlayan:** [Adınızı buraya ekleyin]  
-📧 **İletişim:** [E-posta adresinizi ekleyin]
 
