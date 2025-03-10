@@ -28,12 +28,12 @@ Bu proje, **diabetes.csv** veri seti üzerinde çalışmaktadır ve aşağıdaki
 ##  Proje Yapısı
 ```
 1.naiveBayes/
-│── gaussianNB_scikit.ipynb   # Scikit-learn modeli içeren notebook
-│── gaussianNB_custom.ipynb   # Özel yazılmış Naive Bayes modeli içeren notebook
-│── diabetes.csv              # Kullanılan veri seti
-│── README.md                 # Proje açıklaması ve sonuç değerlendirmesi
-│── requirements.txt          # Gerekli kütüphaneler
-│── .gitignore                # Git tarafından takip edilmeyecek dosyalar
+│── gaussianNB_scikit.ipynb    Scikit-learn modeli içeren notebook
+│── gaussianNB_custom.ipynb    Özel yazılmış Naive Bayes modeli içeren notebook
+│── diabetes.csv               Kullanılan veri seti
+│── README.md                  Proje açıklaması ve sonuç değerlendirmesi
+│── requirements.txt           Gerekli kütüphaneler
+│── .gitignore                 Git tarafından takip edilmeyecek dosyalar
 ```
 
 ##  Veri Seti Hakkında
